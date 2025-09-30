@@ -1,5 +1,5 @@
 const request = require('supertest');
-const app = require('../index'); // import app from index.js
+const app = require('../index'); // imports app without starting server
 
 describe('GET /', () => {
   it('should return upload form', async () => {
