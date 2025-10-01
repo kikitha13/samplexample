@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: samplexample-deployment
+  labels:
+    app: samplexample
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: samplexample
+  template:
+    metadata:
+      labels:
+        app: samplexample
+    spec:
+      containers:
+      - name: samplexample
+        image: kikitha/node-file-upload
+        ports:
+        - containerPort: 3000
+
