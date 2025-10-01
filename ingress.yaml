@@ -5,16 +5,16 @@ metadata:
   namespace: web
   annotations:
     kubernetes.io/ingress.class: alb
-    alb.ingress.kubernetes.io/scheme: internet-facing
-    alb.ingress.kubernetes.io/target-type: ip
 spec:
   rules:
-    - http:
+    - host: '*'   # optional, can set a real host if you have a domain
+      http:
         paths:
           - path: /
             pathType: Prefix
             backend:
               service:
-                name: samplexample-service
+                name: your-service-name
                 port:
                   number: 80
+
