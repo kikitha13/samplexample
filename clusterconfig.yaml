@@ -3,7 +3,7 @@ kind: ClusterConfig
 
 metadata:
   name: web-quickstart
-  region: <region-code>
+  region: ap-south-1
 
 autoModeConfig:
   enabled: true
